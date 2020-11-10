@@ -1,3 +1,4 @@
 # vegas-slider
-
-more info: https://vegas.jaysalvat.com/
+## background slide show
+demo: https://csslick.github.io/vegas-slider/
+official site: https://vegas.jaysalvat.com/
