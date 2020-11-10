@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>background Slide Show</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.1/vegas.min.css"
+    integrity="sha512-BdW43Vh345sgTej8Y9KEWHKGBldhwbImU6F/xj39KFzCWbq4qG64oTIyln2evpjXLcf0uufe/1WjKDWiXu2ssg=="
+    crossorigin="anonymous" />
+  <script src="http://zeptojs.com/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.1/vegas.min.js"
+    integrity="sha512-Bmv8OphSOBca3B+9fmuXfFBTZF4f3dy98T3mEvJHPt3ab4SIbbclYzJJ2//ldUcx6bG2iiFxxWu+CL87StEqDg=="
+    crossorigin="anonymous"></script>
+  <style>
+    #example {
+      width: 100%;
+      height: 500px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="example">
+    <h1>example</h1>
+  </div>
+
+  <script>
+    var title = [
+      'title 1',
+      'title 2',
+      'title 3'
+    ]
+
+    $("#example").vegas({
+      slides: [
+        { src: "http://placeimg.com/1200/400/nature/1" },
+        { src: "http://placeimg.com/1200/400/nature/2" },
+        { src: "http://placeimg.com/1200/400/nature/3" },
+      ],
+      walk: function (index, slideSettings) {
+        $('h1').html(title[index])
+        console.log("Slide index " + index + " image " + slideSettings.src);
+      }
+    });
+  </script>
+</body>
+
+</html>
